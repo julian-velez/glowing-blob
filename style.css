@@ -1,0 +1,39 @@
+body {
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 290px;
+}
+
+.glowing-blob {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: radial-gradient(circle, #ff00ff, #0000ff);
+    animation: glowing 2s ease-in-out infinite;
+    transform-style: preserve-3d;
+    animation: rotation 10s linear infinite;
+  }
+  
+  @keyframes glowing {
+    0% {
+      box-shadow: 0 0 5px #ff00ff, 0 0 20px #ff00ff, 0 0 40px #ff00ff, 0 0 60px #ff00ff;
+    }
+    50% {
+      box-shadow: 0 0 20px #ff00ff, 0 0 40px #ff00ff, 0 0 60px #ff00ff, 0 0 80px #ff00ff;
+    }
+    100% {
+      box-shadow: 0 0 5px #ff00ff, 0 0 20px #ff00ff, 0 0 40px #ff00ff, 0 0 60px #ff00ff;
+    }
+  }
+  
+  @keyframes rotation {
+    0% {
+      transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    }
+    100% {
+      transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+    }
+  }
+  
